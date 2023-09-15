@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-public class ProblematicProblem
+namespace ProblematicProblem
 {
     public class Program
     {
@@ -12,7 +12,7 @@ public class ProblematicProblem
         {
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
             bool cont = Console.ReadLine() == "yes" ? true : false;
-            if (!cont) 
+            if (!cont)
             {
                 return;
             }
@@ -81,7 +81,7 @@ public class ProblematicProblem
                     randomNumber = rng.Next(activities.Count);
                     randomActivity = activities[randomNumber];
                 }
-                Console.Write($"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ");
+                Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                 cont = Console.ReadLine().ToLower() == "redo" ? true : false;
             }
         }
